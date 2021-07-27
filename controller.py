@@ -19,7 +19,7 @@ class Controller():
             print("Wysłano")
 
         else:
-            print("Nie ma takiego użytkownika")
+            print("No user!")
 
     def create_user(self, nickname, password):
         user = User(nickname, password, self)

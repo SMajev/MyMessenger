@@ -1,4 +1,4 @@
-from mediator import Mediator
+from controller import Controller
 
 
 class GUI:
@@ -11,7 +11,7 @@ class GUI:
             "3: Exit"
 
         )
-        self.mediator = Mediator()
+        self.controller = Controller()
         self.main_menu()
 
     def main_menu(self):
@@ -21,12 +21,12 @@ class GUI:
 
             if option == 1:
 
-                self.mediator.login()
+                self.controller.login()
 
             elif option == 2:
 
-                self.mediator.create_user()
-                self.mediator.login()
+                self.controller.create_user()
+                self.controller.login()
 
             elif option == 3:
                 self.is_working = False
