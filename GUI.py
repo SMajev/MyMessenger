@@ -37,6 +37,7 @@ class GUI:
                     self.controller.log_in(user_nickname, user_password)
 
                 elif option == 3:
+                    self.controller.save_users_to_file(self.controller.users)
                     self.is_working = False
 
             elif self.controller.logged_user is not None:

@@ -5,8 +5,6 @@ import pickle
 
 class Controller():
     def __init__(self):
-        self.users = []
-        self.save_users_to_file(self.users)
         self.users = self.read_users_from_file()
         self.logged_user = None
 

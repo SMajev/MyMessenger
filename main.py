@@ -15,7 +15,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-    tomek = controller.create_user("Tomek", "12345")
-    karolina = controller.create_user("Karolina", "54321")
-    tomek.send_message("Karolina", msg)
-    karolina.print_messages()
