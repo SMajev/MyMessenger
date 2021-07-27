@@ -20,6 +20,7 @@ class Controller():
 
         else:
             print("No user!")
+            print("yoyo")
 
     def create_user(self, nickname, password):
         user = User(nickname, password, self)
