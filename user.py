@@ -8,6 +8,9 @@ class User:
         self.messages = []
         self.controller = controller
 
+    def __repr__(self):
+        return f"User: {self.nickname}"
+
     def send_message(self, nickname_to, text):
         self.controller.send_msg(self.nickname, nickname_to, text)
 

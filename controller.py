@@ -8,15 +8,23 @@ class Controller():
         self.logged_user = None
 
     def log_in(self, nickname, password):
+        print(self.users)
+        print(self.logged_user)
         for user in self.users:
             if nickname == user.nickname:
                 if password == user.password:
                     self.logged_user = user.nickname
-                    print((self.logged_user))
+                    return self.logged_user
+
             else:
                 print("No user!")
+        print(self.logged_user)
 
+    def log_out(self):
+        decision = input("Are you sure? ((y)es/(n)o): ")
+        if decision == "y" or "yes":
 
+            self.logged_user = None
 
     def send_msg(self, from_user_nickname, to_user_nickname, text):
         user_to_instance = None
