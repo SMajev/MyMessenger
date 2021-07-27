@@ -5,6 +5,18 @@ from user import User
 class Controller():
     def __init__(self):
         self.users = []
+        self.logged_user = None
+
+    def log_in(self, nickname, password):
+        for user in self.users:
+            if nickname == user.nickname:
+                if password == user.password:
+                    self.logged_user = user.nickname
+                    print((self.logged_user))
+            else:
+                print("No user!")
+
+
 
     def send_msg(self, from_user_nickname, to_user_nickname, text):
         user_to_instance = None

@@ -20,8 +20,10 @@ class GUI:
             option = int(input("co robimy?: "))
 
             if option == 1:
+                user_nickname = input("Nickname: ")
+                user_password = input("Password: ")
 
-                self.controller.login()
+                self.controller.log_in(user_nickname, user_password)
 
             elif option == 2:
 
@@ -31,5 +33,5 @@ class GUI:
             elif option == 3:
                 self.is_working = False
 
-            if self.mediator.loged_user is not None:
+            if self.controller.logged_user is not None:
                 print("udalo sie")
